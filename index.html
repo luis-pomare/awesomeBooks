@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome books collection</title>
+  </head>
+  <body class="flexColumn">
+    <nav class="border">
+      <h2 id="navTitle">Awesome books</h2>
+      <ul id="dinamicList" class="firstMenu">
+        <li id="firstItem" class="selected firstMenu">list</li>
+        <li id="secondItem" class="firstMenu">add new</li>
+        <li id="thirdItem" class="firstMenu">contact</li>
+      </ul>
+    </nav>
+    <p id="date"></p>
+    <main id="mainContainer">
+      <h1 id="mainTittle">All awesome books</h1>
+      <article id="booksContainer" class="border books"></article>
+    </main>
+
+    <form id="form" action="#" class="noVisible">
+      <h1>Add a new book</h1>
+      <input id="bookInput" type="text" placeholder="Title" />
+      <input id="authorInput" type="text" placeholder="Author" />
+      <button id="addButton" type="button">Add</button>
+    </form>
+
+    <article id="contactContainer" class="noVisible">
+      <h1>Contact information</h1>
+      <p class="contactList">
+        Do you have any questions or you just want yo say "hello"? <br />you can
+        reach out to us!
+      </p>
+      <ul class="contactList">
+        <li>email: luispomare92@gmail.com</li>
+        <li>linkedin profile: luis-pomare-388116225/</li>
+        <li>country: Colombia latin America</li>
+      </ul>
+    </article>
+    <p class="border" id="copiRight">Copyright Luis Pomare Web developer</p>
+    <div class="noVisible" id="div"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
