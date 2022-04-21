@@ -1,0 +1,100 @@
+* {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+/* body and dynamic add */
+.flexColumn {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-right: 15px;
+  height: 100vh;
+}
+
+#addButton {
+  align-self: flex-end;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.border {
+  font-size: 0.8em;
+  border: 3px solid #000;
+  padding: 5px;
+  width: 100%;
+}
+
+.books {
+  display: block;
+}
+
+button {
+  font-size: 0.8em;
+  box-shadow: 3px 3px;
+  padding: 0 3px 0 3px;
+  margin-bottom: 4px;
+}
+
+.dark {
+  background-color: #ccc;
+}
+
+.firstMenu {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+#secondItem {
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+}
+
+/* In dynamic list, indicates that the object is selected */
+.selected {
+  color: blue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+#date {
+  align-self: flex-end;
+}
+
+.noVisible {
+  display: none;
+}
+
+#copiRight {
+  position: absolute;
+  align-self: center;
+  bottom: 15px;
+  width: 95%;
+}
+
+form {
+  align-self: center;
+}
+
+.contactList {
+  align-self: center;
+}
