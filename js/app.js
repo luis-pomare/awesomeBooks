@@ -1,24 +1,11 @@
-// Read elements from document
-const bookInput = document.getElementById('bookInput');
-const authorInput = document.getElementById('authorInput');
-const addButton = document.getElementById('addButton');
-const booksContainer = document.getElementById('booksContainer');
-const div = document.getElementById('div');
-const date = document.getElementById('date');
-const addContainer = document.getElementById('form');
-const contactContainer = document.getElementById('contactContainer');
-const firstItem = document.getElementById('firstItem');
-const secondItem = document.getElementById('secondItem');
-const thirdItem = document.getElementById('thirdItem');
-const mainContainer = document.getElementById('mainContainer');
-
+import domObject from "./modules/user-interface.js";
 // Create array to get input books (from input fields)
 let bookCollection = [];
 let index = 0;
 
 // If there is something in local storage, it is taken by the main array
-if (JSON.parse(localStorage.getItem('bookArray')) !== null) {
-  bookCollection = JSON.parse(localStorage.getItem('bookArray'));
+if (JSON.parse(localStorage.getItem("bookArray")) !== null) {
+  bookCollection = JSON.parse(localStorage.getItem("bookArray"));
   index = bookCollection.length;
 }
 
@@ -34,21 +21,24 @@ class Entry {
 
 // Creates one new object and add it to the main array
 function newBook() {
-  bookCollection[index] = new Entry(authorInput.value, bookInput.value);
-  localStorage.setItem('bookArray', JSON.stringify(bookCollection));
+  bookCollection[index] = new Entry(
+    domObject.authorInput.value,
+    domObject.bookInput.value
+  );
+  localStorage.setItem("bookArray", JSON.stringify(bookCollection));
   index += 1;
 }
 
 // Refreshes the page with all the data in the array
 function renderCollection() {
-  booksContainer.innerHTML = '';
+  domObject.booksContainer.innerHTML = "";
   for (let i = 0; i < index; i += 1) {
-    const currentElement = document.createElement('div');
-    let background = '';
+    const currentElement = document.createElement("div");
+    let background = "";
     if (i % 2 === 0) {
-      background = 'dark';
+      background = "dark";
     } else {
-      background = '';
+      background = "";
     }
     currentElement.innerHTML = `
       <div class="book ${background}">
@@ -56,70 +46,70 @@ function renderCollection() {
       <button id="${i}" onclick="removeBook(${i})">Remove</button>
       </div>
     `;
-    booksContainer.appendChild(currentElement);
+    domObject.booksContainer.appendChild(currentElement);
   }
 }
 
 function removeBook(position) {
   bookCollection = bookCollection.filter(
-    (item) => bookCollection.indexOf(item) !== position,
+    (item) => bookCollection.indexOf(item) !== position
   );
   index -= 1;
-  localStorage.setItem('bookArray', JSON.stringify(bookCollection));
+  localStorage.setItem("bookArray", JSON.stringify(bookCollection));
   renderCollection();
 }
 
 function clearInputs() {
-  bookInput.value = '';
-  authorInput.value = '';
+  domObject.bookInput.value = "";
+  domObject.authorInput.value = "";
 }
 
 // Updates the interface with storeged books
 renderCollection();
 
 // Main add function
-addButton.addEventListener('click', () => {
-  if (bookInput.value !== '' && authorInput.value !== '') {
+domObject.addButton.addEventListener("click", () => {
+  if (domObject.bookInput.value !== "" && authorInput.value !== "") {
     newBook();
     renderCollection();
     clearInputs();
   }
 });
 
-div.addEventListener('click', () => {
+div.addEventListener("click", () => {
   removeBook(0);
 });
 
 setInterval(() => {
-  date.innerHTML = Date();
+  domObject.date.innerHTML = Date();
 }, 1000);
 
-firstItem.addEventListener('click', () => {
-  mainContainer.classList.add('books');
-  mainContainer.classList.remove('noVisible');
-  addContainer.classList.add('noVisible');
-  contactContainer.classList.add('noVisible');
-  firstItem.classList.add('selected');
-  secondItem.classList.remove('selected');
-  thirdItem.classList.remove('selected');
+domObject.firstItem.addEventListener("click", () => {
+  domObject.mainContainer.classList.add("books");
+  domObject.mainContainer.classList.remove("noVisible");
+  domObject.addContainer.classList.add("noVisible");
+  domObject.contactContainer.classList.add("noVisible");
+  domObject.firstItem.classList.add("selected");
+  domObject.secondItem.classList.remove("selected");
+  domObject.thirdItem.classList.remove("selected");
 });
 
-secondItem.addEventListener('click', () => {
-  addContainer.classList.add('flexColumn');
-  addContainer.classList.remove('noVisible');
-  mainContainer.classList.add('noVisible');
-  contactContainer.classList.add('noVisible');
-  firstItem.classList.remove('selected');
-  secondItem.classList.add('selected');
-  thirdItem.classList.remove('selected');
+domObject.secondItem.addEventListener("click", () => {
+  domObject.addContainer.classList.add("flexColumn");
+  domObject.addContainer.classList.remove("noVisible");
+  domObject.mainContainer.classList.add("noVisible");
+  domObject.contactContainer.classList.add("noVisible");
+  domObject.firstItem.classList.remove("selected");
+  domObject.secondItem.classList.add("selected");
+  domObject.thirdItem.classList.remove("selected");
 });
 
-thirdItem.addEventListener('click', () => {
-  contactContainer.classList.add('flexColumn');
-  contactContainer.classList.remove('noVisible');
-  addContainer.classList.add('noVisible');
-  mainContainer.classList.add('noVisible');
-  firstItem.classList.remove('selected');
-  secondItem.classList.remove('selected');
-  thirdItem.classList.add('selected');
+domObject.thirdItem.addEventListener("click", () => {
+  domObject.contactContainer.classList.add("flexColumn");
+  domObject.contactContainer.classList.remove("noVisible");
+  domObject.addContainer.classList.add("noVisible");
+  domObject.mainContainer.classList.add("noVisible");
+  domObject.firstItem.classList.remove("selected");
+  domObject.secondItem.classList.remove("selected");
+  domObject.thirdItem.classList.add("selected");
 });
