@@ -1,5 +1,5 @@
 {
-  "name": "awesomebooks",
+  "name": "awesomebookswithes6",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luis-pomare/awesomeBooks.git"
+    "url": "git+https://github.com/luis-pomare/awesomeBooksWithEs6.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luis-pomare/awesomeBooks/issues"
+    "url": "https://github.com/luis-pomare/awesomeBooksWithEs6/issues"
   },
-  "homepage": "https://github.com/luis-pomare/awesomeBooks#readme",
+  "homepage": "https://github.com/luis-pomare/awesomeBooksWithEs6#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
