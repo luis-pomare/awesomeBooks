@@ -1,25 +1,20 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome books
+# Awesome books with ES6 sintax
 
-![](https://img.shields.io/badge/Academic-blue)
-![](https://img.shields.io/badge/HTML-red)
-![](https://img.shields.io/badge/JavaScript-yellow)
-
-
-> Simple application developed with javascrip. It's main function is to storage prefer books (just author and book name) in one page, allowing to the user to remove it by clicking a button. In this last updates, we have added some styles to make it more confortable to use as well as some functionalities that make it more dynamic.
+> This is an improved version of the "awesome books" project. We have reorganized several functions in js modules, including the date/time luxon library to improve showing time functionality.
 
 ## Built With
 
-- HTML, css and Javascript.
+- HTML, css and JS
+- Luxon library
+- Javascript modules
 
-## App screenshot
+## Live Demo
 
-![](images/app_screenshot.png)
+[Live Demo Link](https://luis-pomare.github.io/awesomeBooksWithEs6/)
 
-## Live version
-
-https://luis-pomare.github.io/awesomeBooks/
+[<img src="app_screenshot.png">](https://luis-pomare.github.io/awesomeBooksWithEs6/)
 
 ## Getting Started
 
@@ -27,11 +22,9 @@ You must to add your prefer books one by one. Go to the "add new" button and fil
 
 The most recent books is going to be shown in the top of the "list" page. The book list is being storaged in your local broweser so you don't have to concern in close the window.
 
-### Setup
-- Click the green `Code` button on the repo
-- In your local PC, open your terminal in the folder you would like to clone the project.
-- Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/luis-pomare/awesomeBooks`
-- On the terminal, navigate into the directory like so: `cd awesomeBooks`
+### Install
+
+If you want to run this repository on your local machine, you need to remember to install and use an extension like "live server" (from vscode), as this app contains JS modules that don't run locally without such extensions.
 
 ## Authors
 
@@ -41,22 +34,9 @@ The most recent books is going to be shown in the top of the "list" page. The bo
 - Twitter: [@LuisPomare1](https://twitter.com/LuisPomare1)
 - LinkedIn: [luis-pomare-388116225](https://www.linkedin.com/in/luis-pomare-388116225/)
 
-👤 **Mark Rubanza**
-
-- GitHub: [@Banzaman](https://github.com/banzaman)
-- Twitter: [@banzamarq](https://twitter.com/banzamarq10)
-- LinkedIn: [mark Rubanza Anderson](https://www.linkedin.com/in/mark-rubanza-anderson-4399a2211/)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/luis-pomare/awesomeBooks/issues).
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
 
 ## 📝 License
 

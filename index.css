@@ -40,6 +40,7 @@ button {
   box-shadow: 3px 3px;
   padding: 0 3px 0 3px;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .dark {
@@ -85,10 +86,12 @@ h1 {
 }
 
 #copiRight {
-  position: absolute;
-  align-self: center;
-  bottom: 15px;
-  width: 95%;
+  width: auto;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
 }
 
 form {
